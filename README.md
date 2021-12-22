@@ -1,2 +1,2 @@
-# deep-learning-project
-A Tensorflow project for an university exam.
+# Deep Learning Project
+A Tensorflow project for a university exam.
