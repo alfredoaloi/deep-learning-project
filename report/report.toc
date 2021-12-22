@@ -1,0 +1,15 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{3}{}%
+\contentsline {section}{\numberline {2}Task 1: next value prediction}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Data understanding}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Data preparation}{4}{}%
+\contentsline {subsection}{\numberline {2.3}Modeling}{4}{}%
+\contentsline {subsection}{\numberline {2.4}Evaluation}{4}{}%
+\contentsline {subsection}{\numberline {2.5}Finding better parameters}{4}{}%
+\contentsline {subsection}{\numberline {2.6}Conclusions}{4}{}%
+\contentsline {section}{\numberline {3}Task 2: anomaly detection}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Data understanding}{5}{}%
+\contentsline {subsection}{\numberline {3.2}Data preparation}{5}{}%
+\contentsline {subsection}{\numberline {3.3}Modeling}{5}{}%
+\contentsline {subsection}{\numberline {3.4}Evaluation}{5}{}%
+\contentsline {subsection}{\numberline {3.5}Conclusions}{5}{}%
