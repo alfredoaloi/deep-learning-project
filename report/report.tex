@@ -6,26 +6,37 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{minted}
+
 \title{Predict Parkinson Disease using wearable data}
 \author{Aloi Alfredo, Riccio Francesco}
 \begin{document}
 	\maketitle
-	\comment{text}{comment}
 	\begin{abstract}
 		This is a project for the Deep Learning course held in the Master Degree in Computer Science of Università degli Studi della Calabria.
 	\end{abstract}
 	\newpage
 	\tableofcontents
 	\newpage
+	
 	\section{Introduction}
-	Introduction about the project in general...
+	Parkinson disease, the second most neurological disorder that causes significant disability, reduces the quality of life and has no cure. Approximately, 90\% affected people with Parkinson have speech disorders. Deep learning has the potential to give valuable information after processing, that can be discovered through deep analysis and efficient processing of data by decision makers. The main problem is the identification of OFF symptoms perceived by the study subject with reasonable accuracy from real-world data collected. OFF periods are times when Parkinson’s disease medication, namely levodopa, is not	working optimally. As a result,	symptoms return. OFF periods can include both motor symptoms, such as tremor	and rigidity, and non-motor symptoms, such as anxiety. The goal is to consolidate data collection by
+	identifying the most important variables to solve the problem.
+		
 	\newpage
+	
 	\section{Task 1: next value prediction}
-	General description about the task...
-	\subsection{Data understanding}
-	Description about the data...
-	\subsection{Data preparation}
-	All the steps: normalization etc.
+	We have 3 time series (X, Y, Z) recorded each 10 seconds. For the first sub-task we consider, for each time series, sequences of five minutes (\mintinline[breaklines]{python}|window_size = 30|) every one minute (\mintinline[breaklines]{python}|window_shift = 6|), predicting the next value in the series. The evaluation metric is the Mean Absolute Error, in particular we have to go below:
+	\begin{itemize}
+		\item 81.06 for X;
+		\item 85.26 for Y;
+		\item 79.94 for Z.
+	\end{itemize} We then choose, for the second sub-task, the one time series with the worst value of the evaluation metric, looking for a better combination of window size/window shift.
+	
+	\subsection{Data understanding and preparation}
+	We have two files, \mintinline[breaklines]{python}|train.csv| and \mintinline[breaklines]{python}|test.csv|, each one containing three columns, representing the three time series X, Y and Z. The \mintinline[breaklines]{python}|test.csv| file will be used for the evaluation, while the \mintinline[breaklines]{python}|train.csv| file, that contains 144910 rows, will be used for the training part.\\
+	CONTINUARE CON LA PREPARATION
+
 	\subsection{Modeling}
 	Model description
 	\subsection{Evaluation}
@@ -34,7 +45,9 @@
 	Talk about searching for best window size and shift
 	\subsection{Conclusions}
 	conclusions about this task
+	
 	\newpage
+	
 	\section{Task 2: anomaly detection}
 	General description about the task
 	\subsection{Data understanding}
@@ -47,4 +60,5 @@
 	Talking about evaluation and results
 	\subsection{Conclusions}
 	conclusions about this task
+
 \end{document}
