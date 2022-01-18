@@ -7,8 +7,7 @@
 \contentsline {subsection}{\numberline {2.4}Finding better parameters}{9}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}All in one model}{9}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Task 2: anomaly detection}{13}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Data understanding}{13}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Data preparation}{13}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Modeling}{13}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Evaluation}{13}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Conclusions}{13}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.1}Data understanding and preparation}{13}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Modeling}{13}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Evaluation}{16}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Conclusions}{18}{section.4}%

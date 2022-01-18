@@ -25,16 +25,16 @@
 	\begin{abstract}
 		This is a project for the Deep Learning course held in the Master Degree in Computer Science of Università degli Studi della Calabria.
 	\end{abstract}
-
+	
 	\newpage
-
+	
 	\tableofcontents
-
+	
 	\newpage
 	
 	\section{Introduction}
 	Parkinson disease, the second most neurological disorder that causes significant disability, reduces the quality of life and has no cure. Approximately, 90\% affected people with Parkinson have speech disorders. Deep learning has the potential to give valuable information after processing that can be discovered through deep analysis and efficient processing of data by decision makers. The main problem is the identification of OFF symptoms perceived by the study subject with reasonable accuracy from real-world data collected. OFF periods are times when Parkinson’s disease medication, namely levodopa, is not working optimally. As a result, symptoms return. OFF periods can include both motor symptoms, such as tremor and rigidity, and non-motor symptoms, such as anxiety. The goal is to consolidate data collection by identifying the most important variables to solve the problem.
-		
+	
 	\newpage
 	
 	\section{Task 1: next value prediction}
@@ -55,7 +55,7 @@
 		\item we normalize the values inside the produced sequences using a Standard scaler, which scales the data according to a Normal distribution;
 		\item we, additionally, split the produced sequences to obtain training and validation sets to use in the training step, using a ratio of 80:20.
 	\end{enumerate}
-
+	
 	\subsection{Modeling}
 	We choose to build a neural architecture starting with three LSTM layers followed by four Dense layers, with the last one made of just one neuron, which is our output. Between each layer of the architecture we choose to put a dropout layer to mitigate the overfitting bias. We employ a Hyperband tuner to make the choice of the best model parameters for us.
 	\begin{figure}
@@ -98,7 +98,7 @@
 		\centering
 		\begin{tabular}{|c|c|c|}
 			\hline
-			  & \textbf{Target} & \textbf{Actual} \\ 
+			& \textbf{Target} & \textbf{Actual} \\ 
 			\hline
 			\hline
 			X & 81.06 & \textbf{77.62} \\
@@ -167,22 +167,66 @@
 		\caption{The all in one model loss and MAE}
 		\label{task_1.3/loss&mae}
 	\end{figure}
-
+	
 	We are not surprised to see (\autoref{task_1.3/loss&mae}) that the plots are similar to the ones observed before. We can also notice that the model is now more easily keeping a not so high variation in evaluation metric during training, whereas before the values could vary wildly. In spite of this, the evaluation of the trained model on the test set has given a result of 93.86, that is higher than the worst result obtained by the same architecture using the three time series separately.
 	
 	\newpage
 	
 	\section{Task 2: anomaly detection}
-	General description about the task
-	\subsection{Data understanding}
-	Description about the data...
-	\subsection{Data preparation}
-	All the steps: normalization etc.
+	Given data from wearable devices, the goal is to identify anomalous events, like tremors, in a set of observations, that we refer to as OFF periods. Data are collected by patients with and without Parkinson’s Disease. Given the nature of the task, we opted for training a model capable of capturing the trend of the observations of people without Parkinson’s, in order to spot deviations from said trend, and thus the presence of OFF periods in the patient with Parkinson’s.
+	
+	\subsection{Data understanding and preparation}
+	We have two files, \mintinline[breaklines]{python}|train.csv| and \mintinline[breaklines]{python}|test.csv|, each one containing seven columns. Features include:
+	\begin{itemize}
+		\item Identification of patient (\mintinline[breaklines]{python}|patient|);
+		\item Accelerometer readings in the three axes (\mintinline[breaklines]{python}|x|, \mintinline[breaklines]{python}|y| and \mintinline[breaklines]{python}|z|);
+		\item Heart rate (\mintinline[breaklines]{python}|heartRate|);
+		\item Date and timestamp (\mintinline[breaklines]{python}|tsDate| and \mintinline[breaklines]{python}|timestamp|).
+	\end{itemize}
+	The \mintinline[breaklines]{python}|test.csv| file will be used for the detection of anomalies, while the \mintinline[breaklines]{python}|train.csv| file will be used for the training part. The training set is composed of control patients, i.e. volunteers without Parkinson’s Disease, there is a record each 1 second and there are missing values on the heart rate attribute (labeled with \mintinline[breaklines]{python}|-1|). The test set is composed by patients with Parkinson’s Disease and there is a record each 10 seconds. We decided to remove the missing values from the training set.
+	\begin{figure}
+		\centering
+		\includegraphics[height=0.9\textheight]{/task_2/spatial_coordinates.png}
+		\caption{The X, Y and Z spatial coordinates for each patient}
+		\label{task_2/spatial_coordinates}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[height=0.9\textheight]{/task_2/heart_rate.png}
+		\caption{The heart rate for each patient}
+		\label{task_2/heart_rate}
+	\end{figure}
+	Given the granularity mismatch between training set and test set, we decided to resample the portion of training set regarding each patient, in order for them to appear as being recorded each 10 seconds, aggregating by using the mean.\\
+	Next, we normalized the values in the training set using a standard scaler and, afterwards, we segmented the dataset in sequences of fixed window size/window shift (30/1). Eventually, we splitted the produced sequences to obtain training and validation sets to use in the training step, using a ratio of 80:20.
+	
 	\subsection{Modeling}
-	Model description
+	Since this is an anomaly detection task, we used a Variational Autoencoder (VAE). Autoencoders are neural networks whose goal is, given an input, to reproduce the same input as their output, with the constraint of having to translate the high dimensional information on a lower dimension space, called latent space. This means that the network has to reproduce the input with less information, effectively filtering out irrelevant information. A VAE is a special type of autoencoder that tries to learn the Normal distribution followed by the input data.\\
+	The definition of our model goes as follows:
+	\begin{itemize}
+		\item The encoder, which has to compress the input to the latent dimension, is made of two LSTMs and three Dense layers, in this order. To generate a point in the latent space, we employ two additional Dense layers, one that encodes the mean and the other that encodes the variance of the distribution. Finally, these two layers are linked to a sampler that generates the resulting point according to a Normal distribution;
+		\item The decoder, which has to decompress the point in the latent space back to point in the input space, is made of three Dense and two LSTMs, in this order. Eventually, since the last LSTM has an activation function that constrains the output values in the range [-1, 1], we employed a final Dense layer with a linear activation function;
+		\item The loss function of the network was constructed by summing the Mean Square Error to the Kullback-Leibler Divergence between the inferred distribution and the prior, which is a Normal distribution with mean 0 and the same inferred variance.
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[height=0.9\textheight]{/task_2/vae.png}
+		\caption{The VAE model}
+		\label{task_2/vae}
+	\end{figure}
+	After the model definition, we fitted it for 100 epochs using a batch size of 32, keeping track of the MAE of the validation data used during training, in order to save only the best behaving model; this was done using a Model Checkpoint as callback to the fitting process.
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{/task_2/loss&mae.png}
+		\caption{The VAE loss and MAE}
+		\label{task_2/loss&mae}
+	\end{figure}
+	
 	\subsection{Evaluation}
 	Talking about evaluation and results
-	\subsection{Conclusions}
+	
+	\newpage
+	
+	\section{Conclusions}
 	conclusions about this task
-
+	
 \end{document}

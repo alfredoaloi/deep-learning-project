@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.29)  31 DEC 2021 11:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.29)  18 JAN 2022 14:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -578,30 +578,30 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 
 (_minted-report/8413AB539522CF19ED524A34D21ECA2C7C2E7F49E087B8E8E8DF5244CE287E3
 9.pygtex)
-<./images//task_1.1/x_model.png, id=89, 492.84125pt x 1517.67pt>
+<./images//task_1.1/x_model.png, id=84, 492.84125pt x 1517.67pt>
 File: ./images//task_1.1/x_model.png Graphic file (type png)
 <use ./images//task_1.1/x_model.png>
 Package pdftex.def Info: ./images//task_1.1/x_model.png  used on input line 63.
 
 (pdftex.def)             Requested size: 173.0159pt x 532.79639pt.
-<./images//task_1.1/y_model.png, id=91, 492.84125pt x 1517.67pt>
+<./images//task_1.1/y_model.png, id=86, 492.84125pt x 1517.67pt>
 File: ./images//task_1.1/y_model.png Graphic file (type png)
 <use ./images//task_1.1/y_model.png>
 Package pdftex.def Info: ./images//task_1.1/y_model.png  used on input line 69.
 
 (pdftex.def)             Requested size: 173.0159pt x 532.79639pt.
-<./images//task_1.1/z_model.png, id=92, 480.79625pt x 1517.67pt>
+<./images//task_1.1/z_model.png, id=87, 480.79625pt x 1517.67pt>
 File: ./images//task_1.1/z_model.png Graphic file (type png)
 <use ./images//task_1.1/z_model.png>
 Package pdftex.def Info: ./images//task_1.1/z_model.png  used on input line 75.
 
 (pdftex.def)             Requested size: 168.7874pt x 532.79639pt.
-<./images//task_1.1/losses.png, id=93, 1218.5525pt x 279.0425pt>
+<./images//task_1.1/losses.png, id=88, 1218.5525pt x 279.0425pt>
 File: ./images//task_1.1/losses.png Graphic file (type png)
 <use ./images//task_1.1/losses.png>
 Package pdftex.def Info: ./images//task_1.1/losses.png  used on input line 82.
 (pdftex.def)             Requested size: 390.0pt x 89.30818pt.
-<./images//task_1.1/maes.png, id=94, 1171.37625pt x 279.0425pt>
+<./images//task_1.1/maes.png, id=89, 1171.37625pt x 279.0425pt>
 File: ./images//task_1.1/maes.png Graphic file (type png)
 <use ./images//task_1.1/maes.png>
 Package pdftex.def Info: ./images//task_1.1/maes.png  used on input line 88.
@@ -609,18 +609,18 @@ Package pdftex.def Info: ./images//task_1.1/maes.png  used on input line 88.
  [4] [5 <./images//task_1.1/x_model.png>] [6 <./images//task_1.1/y_model.png>] 
 [7 <./images//task_1.1/z_model.png>] [8 <./images//task_1.1/losses.png> <./imag
 es//task_1.1/maes.png>]
-<./images//task_1.2/evaluations.png, id=136, 999.735pt x 224.84pt>
+<./images//task_1.2/evaluations.png, id=131, 999.735pt x 224.84pt>
 File: ./images//task_1.2/evaluations.png Graphic file (type png)
 <use ./images//task_1.2/evaluations.png>
 Package pdftex.def Info: ./images//task_1.2/evaluations.png  used on input line
  118.
 (pdftex.def)             Requested size: 390.0pt x 87.71126pt.
-<./images//task_1.3/model.png, id=139, 480.79625pt x 1517.67pt>
+<./images//task_1.3/model.png, id=134, 480.79625pt x 1517.67pt>
 File: ./images//task_1.3/model.png Graphic file (type png)
 <use ./images//task_1.3/model.png>
 Package pdftex.def Info: ./images//task_1.3/model.png  used on input line 160.
 (pdftex.def)             Requested size: 168.7874pt x 532.79639pt.
-<./images//task_1.3/loss&mae.png, id=140, 923.45pt x 346.29375pt>
+<./images//task_1.3/loss&mae.png, id=135, 923.45pt x 346.29375pt>
 File: ./images//task_1.3/loss&mae.png Graphic file (type png)
 <use ./images//task_1.3/loss&mae.png>
 Package pdftex.def Info: ./images//task_1.3/loss&mae.png  used on input line 16
@@ -628,20 +628,106 @@ Package pdftex.def Info: ./images//task_1.3/loss&mae.png  used on input line 16
 (pdftex.def)             Requested size: 390.0pt x 146.25082pt.
  [9 <./images//task_1.2/evaluations.png>]
 [10] [11 <./images//task_1.3/model.png>] [12 <./images//task_1.3/loss&mae.png>]
-[13] (report.aux)
+\openout4 = `report.pyg'.
+
+
+(_minted-report/8413AB539522CF19ED524A34D21ECA2C7C2E7F49E087B8E8E8DF5244CE287E3
+9.pygtex)
+\openout4 = `report.pyg'.
+
+
+(_minted-report/8145DAE91F5E02E0231F2BF285FEC13F7C2E7F49E087B8E8E8DF5244CE287E3
+9.pygtex)
+\openout4 = `report.pyg'.
+
+
+(_minted-report/3394C427CFAEB9BF8558FF4A55DC4BF37C2E7F49E087B8E8E8DF5244CE287E3
+9.pygtex)
+\openout4 = `report.pyg'.
+
+
+(_minted-report/401B30E3B8B5D629635A5C613CDB79197C2E7F49E087B8E8E8DF5244CE287E3
+9.pygtex)
+\openout4 = `report.pyg'.
+
+
+(_minted-report/009520053B00386D1173F3988C55D1927C2E7F49E087B8E8E8DF5244CE287E3
+9.pygtex)
+\openout4 = `report.pyg'.
+
+
+(_minted-report/A8A78D0FF555C931F045B6F4481298467C2E7F49E087B8E8E8DF5244CE287E3
+9.pygtex)
+\openout4 = `report.pyg'.
+
+
+(_minted-report/78B087389EFC730C1425BAF4C34457047C2E7F49E087B8E8E8DF5244CE287E3
+9.pygtex)
+\openout4 = `report.pyg'.
+
+
+(_minted-report/2251F919409FD8828511914AE2FD4E5F7C2E7F49E087B8E8E8DF5244CE287E3
+9.pygtex)
+\openout4 = `report.pyg'.
+
+
+(_minted-report/1DED054093DE910D9786C62BC4FE8CC67C2E7F49E087B8E8E8DF5244CE287E3
+9.pygtex)
+\openout4 = `report.pyg'.
+
+
+(_minted-report/8145DAE91F5E02E0231F2BF285FEC13F7C2E7F49E087B8E8E8DF5244CE287E3
+9.pygtex)
+\openout4 = `report.pyg'.
+
+
+(_minted-report/8413AB539522CF19ED524A34D21ECA2C7C2E7F49E087B8E8E8DF5244CE287E3
+9.pygtex)
+\openout4 = `report.pyg'.
+
+
+(_minted-report/EB844645E8E61DE0A4CF4B991E65E63E7C2E7F49E087B8E8E8DF5244CE287E3
+9.pygtex)
+<./images//task_2/spatial_coordinates.png, id=160, 1186.4325pt x 2229.32875pt>
+File: ./images//task_2/spatial_coordinates.png Graphic file (type png)
+<use ./images//task_2/spatial_coordinates.png>
+Package pdftex.def Info: ./images//task_2/spatial_coordinates.png  used on inpu
+t line 189.
+(pdftex.def)             Requested size: 283.53668pt x 532.79639pt.
+<./images//task_2/heart_rate.png, id=161, 1163.34625pt x 2229.32875pt>
+File: ./images//task_2/heart_rate.png Graphic file (type png)
+<use ./images//task_2/heart_rate.png>
+Package pdftex.def Info: ./images//task_2/heart_rate.png  used on input line 19
+5.
+(pdftex.def)             Requested size: 278.01947pt x 532.79639pt.
+ [13] [14 <./images//task_2/spatial_coordinates.png>] [15 <./images//task_2/hea
+rt_rate.png>]
+<./images//task_2/vae.png, id=179, 848.16875pt x 2517.405pt>
+File: ./images//task_2/vae.png Graphic file (type png)
+<use ./images//task_2/vae.png>
+Package pdftex.def Info: ./images//task_2/vae.png  used on input line 212.
+(pdftex.def)             Requested size: 179.50548pt x 532.79639pt.
+<./images//task_2/loss&mae.png, id=180, 221.628pt x 83.1105pt>
+File: ./images//task_2/loss&mae.png Graphic file (type png)
+<use ./images//task_2/loss&mae.png>
+Package pdftex.def Info: ./images//task_2/loss&mae.png  used on input line 219.
+
+(pdftex.def)             Requested size: 390.0pt x 146.2508pt.
+ [16] [17 <./images//task_2/vae.png>] [18 <./images//task_2/loss&mae.png>] (rep
+ort.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 9F76CF4742F629CBB443B750F52DB1B9;1864.
+(rerunfilecheck)             Checksum: 3552D68E943568D46B588D43891A38C8;1795.
 runsystem(del report.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 14633 strings out of 478659
- 250220 string characters out of 2845919
- 599414 words of memory out of 3000000
- 32441 multiletter control sequences out of 15000+600000
+ 14732 strings out of 478659
+ 256855 string characters out of 2845919
+ 600498 words of memory out of 3000000
+ 32496 multiletter control sequences out of 15000+600000
  418276 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,81p,923b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,9n,81p,923b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\laolr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx
 1440.pk> <C:\Users\laolr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\tcrm1200.pk> <C:\Users\laolr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
@@ -653,9 +739,9 @@ ts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\laolr\AppData\Local\MiKT
 eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\laolr\AppData\Loca
 l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\laolr\AppDat
 a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk>
-Output written on report.pdf (13 pages, 514581 bytes).
+Output written on report.pdf (18 pages, 1396886 bytes).
 PDF statistics:
- 475 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 515 PDF objects out of 1000 (max. 8388607)
+ 49 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
