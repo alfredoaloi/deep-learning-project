@@ -9,5 +9,6 @@
 \contentsline {section}{\numberline {3}Task 2: anomaly detection}{13}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Data understanding and preparation}{13}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Modeling}{13}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Evaluation}{16}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Conclusions}{18}{section.4}%
+\contentsline {subsection}{\numberline {3.3}Threshold computation}{16}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Detection of anomalies}{19}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Conclusions}{21}{section.4}%

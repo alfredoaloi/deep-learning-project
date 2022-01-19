@@ -8,6 +8,8 @@
 \usepackage{graphicx}
 \usepackage{minted}
 \usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{amsmath}
 \hypersetup{
 	colorlinks=true,
 	linkcolor=blue
@@ -15,7 +17,7 @@
 
 \graphicspath{{./images}}
 
-\title{Predict Parkinson Disease using wearable data}
+\title{Predict Parkinson's Disease using wearable data}
 \author{Aloi Alfredo, Riccio Francesco}
 
 \begin{document}
@@ -33,31 +35,30 @@
 	\newpage
 	
 	\section{Introduction}
-	Parkinson disease, the second most neurological disorder that causes significant disability, reduces the quality of life and has no cure. Approximately, 90\% affected people with Parkinson have speech disorders. Deep learning has the potential to give valuable information after processing that can be discovered through deep analysis and efficient processing of data by decision makers. The main problem is the identification of OFF symptoms perceived by the study subject with reasonable accuracy from real-world data collected. OFF periods are times when Parkinson’s disease medication, namely levodopa, is not working optimally. As a result, symptoms return. OFF periods can include both motor symptoms, such as tremor and rigidity, and non-motor symptoms, such as anxiety. The goal is to consolidate data collection by identifying the most important variables to solve the problem.
+	Parkinson's disease, the second most neurological disorder that causes significant disability, reduces the quality of life and has no cure. Approximately, 90\% of affected people with Parkinson's have speech disorders. Deep learning has the potential to give valuable information after processing that can be discovered through deep analysis and efficient processing of data by decision makers. The main problem is the identification of OFF symptoms perceived by the study subject with reasonable accuracy from real-world data collected. OFF periods are times when Parkinson’s disease medication, namely Levodopa, is not working optimally. As a result, symptoms return. OFF periods can include both motor symptoms, such as tremor and rigidity, and non-motor symptoms, such as anxiety. The goal is to consolidate data collection by identifying the most important variables to solve the problem.
 	
 	\newpage
 	
 	\section{Task 1: next value prediction}
-	We have 3 time series (X, Y, Z) recorded each 10 seconds. For the first sub-task we consider, for each time series, sequences of five minutes (\mintinline[breaklines]{python}|window_size = 30|) every one minute (\mintinline[breaklines]{python}|window_shift = 6|), predicting the next value in the series. The evaluation metric is the Mean Absolute Error, in particular we have to go below:
+	We have 3 time series (X, Y, Z) recorded each 10 seconds. For the first sub-task we considered, for each time series, sequences of five minutes (\mintinline[breaklines]{python}|window_size = 30|) every one minute (\mintinline[breaklines]{python}|window_shift = 6|), predicting the next value in the series. The evaluation metric is the Mean Absolute Error, in particular we have to go below:
 	\begin{itemize}
 		\item 81.06 for X;
 		\item 85.26 for Y;
 		\item 79.94 for Z.
 	\end{itemize}
-	We then choose, for the second sub-task, the one time series with the worst value of the evaluation metric, looking for a better combination of window size/window shift.
+	We then chose, for the second sub-task, the one time series with the worst value of the evaluation metric, looking for a better combination of window size/window shift.
 	
 	\subsection{Data understanding and preparation}
-	We have two files, \mintinline[breaklines]{python}|train.csv| and \mintinline[breaklines]{python}|test.csv|, each one containing three columns, representing the three time series X, Y and Z. The \mintinline[breaklines]{python}|test.csv| file will be used for the evaluation, while the \mintinline[breaklines]{python}|train.csv| file, that contains 144910 rows, will be used for the training part.
-	
-	Since the three time series to be used in the training steps are inside one single dataset, we start the preparation of our data by first splitting it into the three different time series. For each one of the generated time series:
+	We have two files, \mintinline[breaklines]{python}|train.csv| and \mintinline[breaklines]{python}|test.csv|, each one containing three columns, representing the three time series X, Y and Z. The \mintinline[breaklines]{python}|test.csv| file was used for the evaluation, while the \mintinline[breaklines]{python}|train.csv| file, that contains 144910 rows, was used for the training part.\\
+	Since the three time series to be used in the training steps are inside one single dataset, we started the preparation of our data by first splitting it into the three different time series. For each one of the generated time series:
 	\begin{enumerate}
-		\item we produce a set of sequences, basing ourselves on the aforementioned window size and window shift, with the corresponding labels, representing the element that follows each sequence in the series;
-		\item we normalize the values inside the produced sequences using a Standard scaler, which scales the data according to a Normal distribution;
+		\item we produced a set of sequences, basing ourselves on the aforementioned window size and window shift, with the corresponding labels, representing the element that follows each sequence in the series;
+		\item we normalized the values inside the produced sequences using a Standard scaler, which scales the data according to a Normal distribution;
 		\item we, additionally, split the produced sequences to obtain training and validation sets to use in the training step, using a ratio of 80:20.
 	\end{enumerate}
 	
 	\subsection{Modeling}
-	We choose to build a neural architecture starting with three LSTM layers followed by four Dense layers, with the last one made of just one neuron, which is our output. Between each layer of the architecture we choose to put a dropout layer to mitigate the overfitting bias. We employ a Hyperband tuner to make the choice of the best model parameters for us.
+	We chose to build a neural architecture starting with three LSTM layers followed by four Dense layers, with the last one made of just one neuron, which is our output. Between each layer of the architecture we chose to put a dropout layer to mitigate the overfitting bias. We employed a Hyperband tuner to make the choice of the best model parameters for us.
 	\begin{figure}
 		\centering
 		\includegraphics[height=0.9\textheight]{/task_1.1/x_model.png}
@@ -76,7 +77,7 @@
 		\caption{The model for Z time series}
 		\label{task_1.1/z_model}
 	\end{figure}
-	Next, we fit our models for 25 epochs using a batch size of 32, keeping track of the evaluation metric score of the validation data used during training, in order to save only the best behaving model; this is done using a Model Checkpoint as callback to the fitting process.
+	Next, we fit our models for 25 epochs using a batch size of 32, keeping track of the evaluation metric score of the validation data used during training, in order to save only the best behaving model; this was done using a Model Checkpoint as callback to the fitting process.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=\linewidth]{/task_1.1/losses.png}
@@ -93,7 +94,7 @@
 	\subsection{Evaluation}
 	Looking at the plots regarding the loss (\autoref{task_1.1/losses}), we can observe how in the first epochs the models learn very quickly, suffering a sudden slowdown in the following epochs, but, anyway, the learning curve appears to be quite smooth for each time series. On the other hand, we can notice, in the plots regarding the Mean Absolute Error (\autoref{task_1.1/maes}), that each time series has an irregular behaviour, especially the Z time series, with a high variability in the values of said metric during training.
 	
-	To evaluate our models, we first have to apply the same preprocessing steps also to the test dataset, namely: splitting of the different time series, generation of sequences and normalization.
+	To evaluate our models, we first had to apply the same preprocessing steps also to the test dataset, namely: splitting of the different time series, generation of sequences and normalization.
 	\begin{table}
 		\centering
 		\begin{tabular}{|c|c|c|}
@@ -109,10 +110,10 @@
 		\caption{Testing results obtained}
 		\label{task_1.1/evaluation}
 	\end{table}
-	Concerning the results obtained after testing (\autoref{task_1.1/evaluation}), these are quite good, all the evaluation metrics respect the set objective values. In particular, with regards to the X time series, we are far below the target threshold (77.62 compared to 81.06), while for the other two the difference is smaller (84.31 and 78.39 compared to, respectively, 85.26 and 79.94).	
+	Concerning the results obtained after testing (\autoref{task_1.1/evaluation}), these are quite good, all the evaluation metrics respect the required objective values. In particular, with regards to the X time series, we are far below the target threshold (77.62 compared to 81.06), while for the other two the difference is smaller (84.31 and 78.39 compared to, respectively, 85.26 and 79.94).	
 	
 	\subsection{Finding better parameters}
-	The objective of this subtask is to try to improve the results obtained previously, for the Y time series. Specifically, we want to find a better combination of window size and window shift. To make this possible, we have defined a search space, consisting of five values for the window size (18, 24, 30, 36 and 42) and four values for the window shift (1, 3, 6, 9). For each combination of window size/window shift we fit the model and test it, saving the respective evaluation.
+	The objective of this subtask is to try to improve the results obtained previously, for the Y time series. Specifically, we wanted to find a better combination of window size and window shift. To make this possible, we defined a search space, consisting of five values for the window size (18, 24, 30, 36 and 42) and four values for the window shift (1, 3, 6, 9). For each combination of window size/window shift we fit the model and test it, saving the respective evaluation.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=\linewidth]{/task_1.2/evaluations.png}
@@ -154,7 +155,7 @@
 	It can be noticed (\autoref{task_1.2/evaluations_plot}, \autoref{task_1.2/evaluations_table}) how models with a lower window shift tend to perform better, as opposed to those with a higher window shift, that do not perform in the same way.
 	
 	\subsection{All in one model}
-	As an extra step we decide to build a model that takes as input the three time series at once, in order to see if we can obtain more accurate results. We use the same preprocessing approach used in the previous steps. Also here we use a Hyperband tuner to find the best parameters to use for our model, that is then fitted and tested.
+	As an extra step we decided to build a model that takes as input the three time series at once, in order to see if we can obtain more accurate results. We used the same preprocessing approach used in the previous steps. Also here we employed a Hyperband tuner to find the best parameters to use for our model, that is then fit and tested.
 	\begin{figure}
 		\centering
 		\includegraphics[height=0.9\textheight]{/task_1.3/model.png}
@@ -168,12 +169,12 @@
 		\label{task_1.3/loss&mae}
 	\end{figure}
 	
-	We are not surprised to see (\autoref{task_1.3/loss&mae}) that the plots are similar to the ones observed before. We can also notice that the model is now more easily keeping a not so high variation in evaluation metric during training, whereas before the values could vary wildly. In spite of this, the evaluation of the trained model on the test set has given a result of 93.86, that is higher than the worst result obtained by the same architecture using the three time series separately.
+	We were not surprised to see (\autoref{task_1.3/loss&mae}) that the plots are similar to the ones observed before. We can also notice that the model is now more easily keeping a not so high variation in evaluation metric during training, whereas before the values could vary wildly. In spite of this, the evaluation of the trained model on the test set has given a result of 93.86, that is higher than the worst result obtained by the same architecture using the three time series separately.
 	
 	\newpage
 	
 	\section{Task 2: anomaly detection}
-	Given data from wearable devices, the goal is to identify anomalous events, like tremors, in a set of observations, that we refer to as OFF periods. Data are collected by patients with and without Parkinson’s Disease. Given the nature of the task, we opted for training a model capable of capturing the trend of the observations of people without Parkinson’s, in order to spot deviations from said trend, and thus the presence of OFF periods in the patient with Parkinson’s.
+	Given data from wearable devices, the goal is to identify anomalous events, like tremors, in a set of observations, that we refer to as OFF periods. Data are collected by patients with and without Parkinson’s Disease. Given the nature of the task, we opted for training a model capable of capturing the trend of the observations of people without Parkinson’s, in order to spot deviations from said trend, and thus the presence of OFF periods in the patients with Parkinson’s.
 	
 	\subsection{Data understanding and preparation}
 	We have two files, \mintinline[breaklines]{python}|train.csv| and \mintinline[breaklines]{python}|test.csv|, each one containing seven columns. Features include:
@@ -183,7 +184,7 @@
 		\item Heart rate (\mintinline[breaklines]{python}|heartRate|);
 		\item Date and timestamp (\mintinline[breaklines]{python}|tsDate| and \mintinline[breaklines]{python}|timestamp|).
 	\end{itemize}
-	The \mintinline[breaklines]{python}|test.csv| file will be used for the detection of anomalies, while the \mintinline[breaklines]{python}|train.csv| file will be used for the training part. The training set is composed of control patients, i.e. volunteers without Parkinson’s Disease, there is a record each 1 second and there are missing values on the heart rate attribute (labeled with \mintinline[breaklines]{python}|-1|). The test set is composed by patients with Parkinson’s Disease and there is a record each 10 seconds. We decided to remove the missing values from the training set.
+	The \mintinline[breaklines]{python}|test.csv| file was used for the detection of anomalies, while the \mintinline[breaklines]{python}|train.csv| file was used for the training part. The training set is composed of control patients, i.e. volunteers without Parkinson’s Disease; there is a record each 1 second and there are missing values on the heart rate attribute (labeled with \mintinline[breaklines]{python}|-1|). The test set is composed by patients with Parkinson’s Disease and there is a record each 10 seconds. We decided to remove the missing values from the training set (\autoref{task_2/spatial_coordinates} and \autoref{task_2/heart_rate}).
 	\begin{figure}
 		\centering
 		\includegraphics[height=0.9\textheight]{/task_2/spatial_coordinates.png}
@@ -197,13 +198,13 @@
 		\label{task_2/heart_rate}
 	\end{figure}
 	Given the granularity mismatch between training set and test set, we decided to resample the portion of training set regarding each patient, in order for them to appear as being recorded each 10 seconds, aggregating by using the mean.\\
-	Next, we normalized the values in the training set using a standard scaler and, afterwards, we segmented the dataset in sequences of fixed window size/window shift (30/1). Eventually, we splitted the produced sequences to obtain training and validation sets to use in the training step, using a ratio of 80:20.
+	Next, we normalized the values in the training set using a standard scaler and, afterwards, we segmented the dataset in sequences of fixed window size/window shift (30/1). Eventually, we split the produced sequences to obtain training and validation sets to use in the training step, using a ratio of 80:20.
 	
 	\subsection{Modeling}
 	Since this is an anomaly detection task, we used a Variational Autoencoder (VAE). Autoencoders are neural networks whose goal is, given an input, to reproduce the same input as their output, with the constraint of having to translate the high dimensional information on a lower dimension space, called latent space. This means that the network has to reproduce the input with less information, effectively filtering out irrelevant information. A VAE is a special type of autoencoder that tries to learn the Normal distribution followed by the input data.\\
 	The definition of our model goes as follows:
 	\begin{itemize}
-		\item The encoder, which has to compress the input to the latent dimension, is made of two LSTMs and three Dense layers, in this order. To generate a point in the latent space, we employ two additional Dense layers, one that encodes the mean and the other that encodes the variance of the distribution. Finally, these two layers are linked to a sampler that generates the resulting point according to a Normal distribution;
+		\item The encoder, which has to compress the input into the latent dimension, is made of two LSTMs and three Dense layers, in this order. To generate a point in the latent space, we employ two additional Dense layers, one that encodes the mean and the other that encodes the variance of the distribution. Finally, these two layers are linked to a sampler that generates the resulting point according to a Normal distribution;
 		\item The decoder, which has to decompress the point in the latent space back to point in the input space, is made of three Dense and two LSTMs, in this order. Eventually, since the last LSTM has an activation function that constrains the output values in the range [-1, 1], we employed a final Dense layer with a linear activation function;
 		\item The loss function of the network was constructed by summing the Mean Square Error to the Kullback-Leibler Divergence between the inferred distribution and the prior, which is a Normal distribution with mean 0 and the same inferred variance.
 	\end{itemize}
@@ -213,7 +214,7 @@
 		\caption{The VAE model}
 		\label{task_2/vae}
 	\end{figure}
-	After the model definition, we fitted it for 100 epochs using a batch size of 32, keeping track of the MAE of the validation data used during training, in order to save only the best behaving model; this was done using a Model Checkpoint as callback to the fitting process.
+	After the model definition (\autoref{task_2/vae}), we fitted it for 100 epochs using a batch size of 32, keeping track of the MAE of the validation data used during training, in order to save only the best behaving model; this was done using a Model Checkpoint as callback to the fitting process.
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{/task_2/loss&mae.png}
@@ -221,12 +222,64 @@
 		\label{task_2/loss&mae}
 	\end{figure}
 	
-	\subsection{Evaluation}
-	Talking about evaluation and results
+	\subsection{Threshold computation}
+	Once the model has been trained, we have chosen a threshold to understand whether a given sequence is an anomaly or not. First, we let the model predict the sequences in the training set, to be used to compute the mean absolute error ($MAE_{seq}$) between them and the legitimate sequences in the training ones. The threshold, then, is given by:\\
+	\begin{gather*}
+		T = \mu(MAE_{seq}) + \sigma(MAE_{seq})
+	\end{gather*}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.5\linewidth]{/task_2/distribution.png}
+		\caption{The distribution of MAE train samples}
+		\label{task_2/distribution}
+	\end{figure}
+	
+	\subsection{Detection of anomalies}
+	Having computed the threshold, we loaded the test dataset and applied the same preprocessing steps applied to the training data. Then, for each patient we let the model predict the sequences of the test set and computed the $MAE_{seq}$ as described before. Using the threshold, we then determine the anomalous sequences in the test set. Once this has been done, we want to extract which are the samples in the test set that correspond to anomalous behavior, checking if the sample is found in \mintinline[breaklines]{python}|window_size| number of anomalous sequences, discarding all samples that are not found in all of them, in which case we can safely assume that the sample itself is anomalous.
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{/task_2/3006-anomalies.png}
+		\caption{The anomalies for patient 3006}
+		\label{task_2/3006-anomalies}
+	\end{figure}
+	\begin{table}
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\multirow{3}{4em}{\textbf{1004}} & Observations & 144911 & $\sim$402 hours \\
+			& Anomalies & 4136 & $\sim$11 hours \\ \cline{3-4}
+			& \% of anomalies & \multicolumn{2}{|c|}{$\sim$3\%} \\
+			\hline
+			\hline
+			\multirow{3}{4em}{\textbf{1006}} & Observations & 148371 & $\sim$412 hours \\
+			& Anomalies & 2171 & $\sim$6 hours \\ \cline{3-4}
+			& \% of anomalies & \multicolumn{2}{|c|}{$\sim$1\%} \\
+			\hline
+			\hline
+			\multirow{3}{4em}{\textbf{3001}} & Observations & 188904 & $\sim$525 hours \\
+			& Anomalies & 4421 & $\sim$12 hours \\ \cline{3-4}
+			& \% of anomalies & \multicolumn{2}{|c|}{$\sim$2\%} \\
+			\hline
+			\hline
+			\multirow{3}{4em}{\textbf{3006}} & Observations & 109895 & $\sim$305 hours \\
+			& Anomalies & 1249 & $\sim$3 hours \\ \cline{3-4}
+			& \% of anomalies & \multicolumn{2}{|c|}{$\sim$1\%} \\
+			\hline
+			\hline
+			\multirow{3}{4em}{\textbf{4002}} & Observations & 130706 & $\sim$363 hours \\
+			& Anomalies & 7366 & $\sim$20 hours \\ \cline{3-4}
+			& \% of anomalies & \multicolumn{2}{|c|}{$\sim$6\%} \\
+			\hline
+		\end{tabular}
+		\caption{Testing results obtained}
+		\label{task_2/evaluations_table}
+	\end{table}
+	As shown in \autoref{task_2/evaluations_table}, patient 4002 is the one with the most OFF periods, suggesting that for them the medication is less effective, as opposed to patient 3006, which has less anomalies detected and, therefore, the medication is quite effective.
 	
 	\newpage
 	
 	\section{Conclusions}
-	conclusions about this task
+	Regarding the first task, we are satisfied with the results obtained; the evaluation metric for each time series is below the required objective values. Also, changing the window shift from 6 to 1 really helps with bettering the performances of the training stage, yielding better overall results. This, in turn, has led us to using the same combination of window size/window shift for the second task as well. On a different note, the “All-In-One” model, considering all the three time series together, did not give us the results we hoped for.\\
+	Regarding the anomaly detection task, we cannot be sure as to how much the model is good at performing its task, given the unsupervised nature of it. In fact, we were not able to compute precision metrics (i.e. F1-score), that would have given some information about the behavior of the model. Nevertheless, looking at the results and the information given to us, we can say that the likelihood of them being realistic is quite high.
 	
 \end{document}

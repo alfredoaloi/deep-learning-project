@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.29)  18 JAN 2022 14:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.29)  19 JAN 2022 17:11
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -424,7 +424,14 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip57
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 14.
+(C:\Users\laolr\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip58
+\multirow@cntb=\count312
+\multirow@dima=\skip59
+\bigstrutjot=\dimen172
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 16.
 
 (C:\Users\laolr\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
@@ -452,43 +459,43 @@ runsystem(del report.aex)...executed.
 (C:\Users\laolr\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count312
+\l__color_backend_stack_int=\count313
 \l__pdf_internal_box=\box61
 ) (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 (C:\Users\laolr\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count313
-\scratchdimen=\dimen172
+\scratchcounter=\count314
+\scratchdimen=\dimen173
 \scratchbox=\box62
-\nofMPsegments=\count314
-\nofMParguments=\count315
+\nofMPsegments=\count315
+\nofMParguments=\count316
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count316
-\MPscratchDim=\dimen173
-\MPnumerator=\count317
-\makeMPintoPDFobject=\count318
+\MPscratchCnt=\count317
+\MPscratchDim=\dimen174
+\MPnumerator=\count318
+\makeMPintoPDFobject=\count319
 \everyMPtoPDFconversion=\toks29
 )
 (C:\Users\laolr\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -501,7 +508,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 21.
+Package hyperref Info: Link coloring ON on input line 23.
 
 (C:\Users\laolr\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -513,22 +520,22 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count319
+\c@section@level=\count320
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Info: Redefining \ref on input line 23.
+LaTeX Info: Redefining \pageref on input line 23.
+LaTeX Info: Redefining \nameref on input line 23.
  (report.out) (report.out)
 \@outlinefile=\write5
 \openout5 = `report.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
 
 
 (C:\Users\laolr\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
 
 
 (C:\Users\laolr\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -558,6 +565,11 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 
 (_minted-report/DA7A22E813EE5C325E898C48702E782E7C2E7F49E087B8E8E8DF5244CE287E3
 9.pygtex)
+Overfull \hbox (10.09125pt too wide) in paragraph at lines 43--44
+\T1/cmr/m/n/12 task we con-sid-ered, for each time se-ries, se-quences of five 
+min-utes (\T1/cmtt/m/n/12 window_size
+ []
+
 \openout4 = `report.pyg'.
 
 
@@ -578,53 +590,53 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 
 (_minted-report/8413AB539522CF19ED524A34D21ECA2C7C2E7F49E087B8E8E8DF5244CE287E3
 9.pygtex)
-<./images//task_1.1/x_model.png, id=84, 492.84125pt x 1517.67pt>
+<./images//task_1.1/x_model.png, id=89, 492.84125pt x 1517.67pt>
 File: ./images//task_1.1/x_model.png Graphic file (type png)
 <use ./images//task_1.1/x_model.png>
-Package pdftex.def Info: ./images//task_1.1/x_model.png  used on input line 63.
+Package pdftex.def Info: ./images//task_1.1/x_model.png  used on input line 64.
 
 (pdftex.def)             Requested size: 173.0159pt x 532.79639pt.
-<./images//task_1.1/y_model.png, id=86, 492.84125pt x 1517.67pt>
+<./images//task_1.1/y_model.png, id=91, 492.84125pt x 1517.67pt>
 File: ./images//task_1.1/y_model.png Graphic file (type png)
 <use ./images//task_1.1/y_model.png>
-Package pdftex.def Info: ./images//task_1.1/y_model.png  used on input line 69.
+Package pdftex.def Info: ./images//task_1.1/y_model.png  used on input line 70.
 
 (pdftex.def)             Requested size: 173.0159pt x 532.79639pt.
-<./images//task_1.1/z_model.png, id=87, 480.79625pt x 1517.67pt>
+<./images//task_1.1/z_model.png, id=92, 480.79625pt x 1517.67pt>
 File: ./images//task_1.1/z_model.png Graphic file (type png)
 <use ./images//task_1.1/z_model.png>
-Package pdftex.def Info: ./images//task_1.1/z_model.png  used on input line 75.
+Package pdftex.def Info: ./images//task_1.1/z_model.png  used on input line 76.
 
 (pdftex.def)             Requested size: 168.7874pt x 532.79639pt.
-<./images//task_1.1/losses.png, id=88, 1218.5525pt x 279.0425pt>
+<./images//task_1.1/losses.png, id=93, 1218.5525pt x 279.0425pt>
 File: ./images//task_1.1/losses.png Graphic file (type png)
 <use ./images//task_1.1/losses.png>
-Package pdftex.def Info: ./images//task_1.1/losses.png  used on input line 82.
+Package pdftex.def Info: ./images//task_1.1/losses.png  used on input line 83.
 (pdftex.def)             Requested size: 390.0pt x 89.30818pt.
-<./images//task_1.1/maes.png, id=89, 1171.37625pt x 279.0425pt>
+<./images//task_1.1/maes.png, id=94, 1171.37625pt x 279.0425pt>
 File: ./images//task_1.1/maes.png Graphic file (type png)
 <use ./images//task_1.1/maes.png>
-Package pdftex.def Info: ./images//task_1.1/maes.png  used on input line 88.
+Package pdftex.def Info: ./images//task_1.1/maes.png  used on input line 89.
 (pdftex.def)             Requested size: 390.0pt x 92.90607pt.
  [4] [5 <./images//task_1.1/x_model.png>] [6 <./images//task_1.1/y_model.png>] 
 [7 <./images//task_1.1/z_model.png>] [8 <./images//task_1.1/losses.png> <./imag
 es//task_1.1/maes.png>]
-<./images//task_1.2/evaluations.png, id=131, 999.735pt x 224.84pt>
+<./images//task_1.2/evaluations.png, id=136, 999.735pt x 224.84pt>
 File: ./images//task_1.2/evaluations.png Graphic file (type png)
 <use ./images//task_1.2/evaluations.png>
 Package pdftex.def Info: ./images//task_1.2/evaluations.png  used on input line
- 118.
+ 119.
 (pdftex.def)             Requested size: 390.0pt x 87.71126pt.
-<./images//task_1.3/model.png, id=134, 480.79625pt x 1517.67pt>
+<./images//task_1.3/model.png, id=139, 480.79625pt x 1517.67pt>
 File: ./images//task_1.3/model.png Graphic file (type png)
 <use ./images//task_1.3/model.png>
-Package pdftex.def Info: ./images//task_1.3/model.png  used on input line 160.
+Package pdftex.def Info: ./images//task_1.3/model.png  used on input line 161.
 (pdftex.def)             Requested size: 168.7874pt x 532.79639pt.
-<./images//task_1.3/loss&mae.png, id=135, 923.45pt x 346.29375pt>
+<./images//task_1.3/loss&mae.png, id=140, 923.45pt x 346.29375pt>
 File: ./images//task_1.3/loss&mae.png Graphic file (type png)
 <use ./images//task_1.3/loss&mae.png>
 Package pdftex.def Info: ./images//task_1.3/loss&mae.png  used on input line 16
-6.
+7.
 (pdftex.def)             Requested size: 390.0pt x 146.25082pt.
  [9 <./images//task_1.2/evaluations.png>]
 [10] [11 <./images//task_1.3/model.png>] [12 <./images//task_1.3/loss&mae.png>]
@@ -688,46 +700,75 @@ Package pdftex.def Info: ./images//task_1.3/loss&mae.png  used on input line 16
 
 (_minted-report/EB844645E8E61DE0A4CF4B991E65E63E7C2E7F49E087B8E8E8DF5244CE287E3
 9.pygtex)
-<./images//task_2/spatial_coordinates.png, id=160, 1186.4325pt x 2229.32875pt>
+<./images//task_2/spatial_coordinates.png, id=167, 1186.4325pt x 2229.32875pt>
 File: ./images//task_2/spatial_coordinates.png Graphic file (type png)
 <use ./images//task_2/spatial_coordinates.png>
 Package pdftex.def Info: ./images//task_2/spatial_coordinates.png  used on inpu
-t line 189.
+t line 190.
 (pdftex.def)             Requested size: 283.53668pt x 532.79639pt.
-<./images//task_2/heart_rate.png, id=161, 1163.34625pt x 2229.32875pt>
+<./images//task_2/heart_rate.png, id=168, 1163.34625pt x 2229.32875pt>
 File: ./images//task_2/heart_rate.png Graphic file (type png)
 <use ./images//task_2/heart_rate.png>
 Package pdftex.def Info: ./images//task_2/heart_rate.png  used on input line 19
-5.
+6.
 (pdftex.def)             Requested size: 278.01947pt x 532.79639pt.
- [13] [14 <./images//task_2/spatial_coordinates.png>] [15 <./images//task_2/hea
-rt_rate.png>]
-<./images//task_2/vae.png, id=179, 848.16875pt x 2517.405pt>
+
+Overfull \hbox (6.80048pt too wide) in paragraph at lines 187--202
+\T1/cmr/m/n/12 The \T1/cmtt/m/n/12 test[].[]csv \T1/cmr/m/n/12 file was used fo
+r the de-tec-tion of anoma-lies, while the \T1/cmtt/m/n/12 train[].[]csv
+ []
+
+[13] [14 <./images//task_2/spatial_coordinates.png>] [15 <./images//task_2/hear
+t_rate.png>]
+<./images//task_2/vae.png, id=186, 848.16875pt x 2517.405pt>
 File: ./images//task_2/vae.png Graphic file (type png)
 <use ./images//task_2/vae.png>
-Package pdftex.def Info: ./images//task_2/vae.png  used on input line 212.
+Package pdftex.def Info: ./images//task_2/vae.png  used on input line 213.
 (pdftex.def)             Requested size: 179.50548pt x 532.79639pt.
-<./images//task_2/loss&mae.png, id=180, 221.628pt x 83.1105pt>
+<./images//task_2/loss&mae.png, id=188, 221.628pt x 83.1105pt>
 File: ./images//task_2/loss&mae.png Graphic file (type png)
 <use ./images//task_2/loss&mae.png>
-Package pdftex.def Info: ./images//task_2/loss&mae.png  used on input line 219.
+Package pdftex.def Info: ./images//task_2/loss&mae.png  used on input line 220.
 
 (pdftex.def)             Requested size: 390.0pt x 146.2508pt.
- [16] [17 <./images//task_2/vae.png>] [18 <./images//task_2/loss&mae.png>] (rep
-ort.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
+
+ []
+
+<./images//task_2/distribution.png, id=189, 418.56375pt x 307.1475pt>
+File: ./images//task_2/distribution.png Graphic file (type png)
+<use ./images//task_2/distribution.png>
+Package pdftex.def Info: ./images//task_2/distribution.png  used on input line 
+232.
+(pdftex.def)             Requested size: 195.0pt x 143.08925pt.
+\openout4 = `report.pyg'.
+
+
+(_minted-report/80B7443BF2781DE08CDD6A5A5931BC087C2E7F49E087B8E8E8DF5244CE287E3
+9.pygtex)
+<./images//task_2/3006-anomalies.png, id=190, 1445.4pt x 1445.4pt>
+File: ./images//task_2/3006-anomalies.png Graphic file (type png)
+<use ./images//task_2/3006-anomalies.png>
+Package pdftex.def Info: ./images//task_2/3006-anomalies.png  used on input lin
+e 241.
+(pdftex.def)             Requested size: 390.0pt x 389.99857pt.
+ [16] [17 <./images//task_2/vae.png>] [18 <./images//task_2/loss&mae.png> <./im
+ages//task_2/distribution.png>] [19] [20 <./images//task_2/3006-anomalies.png>]
+ [21] (report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 3552D68E943568D46B588D43891A38C8;1795.
+(rerunfilecheck)             Checksum: D428D00D6EBF4B1BC823D1E4BDC3CD84;2027.
 runsystem(del report.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 14732 strings out of 478659
- 256855 string characters out of 2845919
- 600498 words of memory out of 3000000
- 32496 multiletter control sequences out of 15000+600000
+ 14834 strings out of 478659
+ 259493 string characters out of 2845919
+ 603294 words of memory out of 3000000
+ 32582 multiletter control sequences out of 15000+600000
  418276 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,81p,923b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,11n,81p,930b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\laolr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx
 1440.pk> <C:\Users\laolr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\tcrm1200.pk> <C:\Users\laolr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
@@ -738,10 +779,15 @@ ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\laolr\AppData\Local\MiKTeX\fon
 ts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\laolr\AppData\Local\MiKT
 eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\laolr\AppData\Loca
 l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\laolr\AppDat
-a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk>
-Output written on report.pdf (18 pages, 1396886 bytes).
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Users/laolr/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/User
+s/laolr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
+<C:/Users/laolr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+r12.pfb><C:/Users/laolr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb>
+Output written on report.pdf (21 pages, 1692128 bytes).
 PDF statistics:
- 515 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 574 PDF objects out of 1000 (max. 8388607)
+ 56 named destinations out of 1000 (max. 500000)
+ 175 words of extra memory for PDF output out of 10000 (max. 10000000)
 
