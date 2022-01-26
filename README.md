@@ -7,3 +7,4 @@ A Tensorflow project for a university exam.
 - _Complete anomalous output samples_: <code>task_2/csv/complete.csv</code>
 - _Grouped anomalous output samples_: <code>task_2/csv/grouped.csv</code>
 - _Report_: <code>report/report.pdf</code>
+- _Presentation_: <code>Predict Parkinson's Disease using wearable data.pdf</code>
