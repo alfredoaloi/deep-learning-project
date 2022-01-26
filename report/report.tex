@@ -223,7 +223,7 @@
 	\end{figure}
 	
 	\subsection{Threshold computation}
-	Once the model has been trained, we have chosen a threshold to understand whether a given sequence is an anomaly or not. First, we let the model predict the sequences in the training set, to be used to compute the mean absolute error ($MAE_{seq}$) between them and the legitimate sequences in the training ones. The threshold, then, is given by:\\
+	Once the model has been trained, we have chosen a threshold to understand whether a given sequence is an anomaly or not. First, we let the model predict the sequences in the training set, to be used to compute the mean absolute error ($MAE_{seq}$) between them and the legitimate sequences in the training set. The threshold, then, is given by:\\
 	\begin{gather*}
 		T = \mu(MAE_{seq}) + \sigma(MAE_{seq})
 	\end{gather*}
@@ -235,7 +235,7 @@
 	\end{figure}
 	
 	\subsection{Detection of anomalies}
-	Having computed the threshold, we loaded the test dataset and applied the same preprocessing steps applied to the training data. Then, for each patient we let the model predict the sequences of the test set and computed the $MAE_{seq}$ as described before. Using the threshold, we then determine the anomalous sequences in the test set. Once this has been done, we want to extract which are the samples in the test set that correspond to anomalous behavior, checking if the sample is found in \mintinline[breaklines]{python}|window_size| number of anomalous sequences, discarding all samples that are not found in all of them, in which case we can safely assume that the sample itself is anomalous.
+	Having computed the threshold, we loaded the test dataset and applied the same preprocessing steps applied to the training data. Then, for each patient we let the model predict the sequences of the test set and computed the $MAE_{seq}$ as described before. Using the threshold, we then determine the anomalous sequences in the test set. Once this has been done, we want to extract which are the samples in the test set that correspond to anomalous behavior, checking if the sample is found in \mintinline[breaklines]{python}|window_size| number of anomalous sequences, in which case we can safely assume that the sample itself is anomalous, discarding all samples that are not found in all of them.
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{/task_2/3006-anomalies.png}
@@ -274,7 +274,7 @@
 		\caption{Testing results obtained}
 		\label{task_2/evaluations_table}
 	\end{table}
-	As shown in \autoref{task_2/evaluations_table}, patient 4002 is the one with the most OFF periods, suggesting that for them the medication is less effective, as opposed to patient 3006, which has less anomalies detected and, therefore, the medication is quite effective.
+	As shown in \autoref{task_2/evaluations_table}, patient 4002 is the one with the highest number of OFF periods, suggesting that for them the medication is less effective, as opposed to patient 3006, which has less anomalies detected and, therefore, the medication is quite effective.
 	
 	\newpage
 	
